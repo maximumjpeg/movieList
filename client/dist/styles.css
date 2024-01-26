@@ -7,10 +7,11 @@ div{
 }
 
 .card{
-  border: solid 1px;
+  border: solid 4px;
   border-radius: 4px;
   margin: 10px;
   padding: 12px;
+  box-shadow: 1.5px 1.5px;
 }
 .card-poster{
   height: 15vw;
@@ -24,4 +25,8 @@ div{
   border: solid black 2px;
   border-radius: 4px;
   text-align: center;
+}
+
+.list-wrapper{
+
 }

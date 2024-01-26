@@ -1,12 +1,26 @@
+// require('dotenv')
 import React, { useState, useEffect } from 'react';
 import Search from './search.jsx';
 import Header from './header.jsx';
 import List from './list.jsx';
 import Card from './card.jsx';
 
+
 const App = () => {
-  const [currentView, setCurrView] = useState({});
+  const [currentView, setCurrView] = useState([]);
   // const [movieList, setMovieList] = useState([])
+  const [search, setSearch] = useState('');
+  const [movieModel, setMovieModel] = useState({
+    'Title': '',
+    'Year': '',
+    'Rated': '',
+    'Runtime': '',
+    'Genre': '',
+    'Director': '',
+    'Actors': '',
+    'Plot': '',
+    'Poster': ''
+  });
   const [movieList, setMovieList] = useState([
     {
       'Title': 'Hackers',
