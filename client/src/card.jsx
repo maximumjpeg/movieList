@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Card = (props) => {
-  return <div>
+  return <div className="card">
     <div>
-      <img className="poster" src={props.movie.Poster}></img>
+      <img className="card-poster" src={props.movie.Poster}></img>
     </div>
-    <div>{props.movie.Title}</div>
-    <div>{props.movie.Plot}</div>
+    <div className="card-title">{props.movie.Title}</div>
+    <div className="card-plot">{props.movie.Plot}</div>
     <div></div>
 
   </div>

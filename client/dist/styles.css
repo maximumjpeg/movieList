@@ -1,0 +1,27 @@
+body{
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div{
+  align-content: center;
+}
+
+.card{
+  border: solid 1px;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 12px;
+}
+.card-poster{
+  height: 15vw;
+  border-radius: 2px;
+}
+.card-title{
+  font-weight: bolder;
+}
+
+.app-header{
+  border: solid black 2px;
+  border-radius: 4px;
+  text-align: center;
+}
