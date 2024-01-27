@@ -4,12 +4,29 @@ import Search from './search.jsx';
 import Header from './header.jsx';
 import List from './list.jsx';
 import Card from './card.jsx';
-
+import helpers from './helpers.js';
+// import Sample from '../../sample.js';
 
 const App = () => {
   const [currentView, setCurrView] = useState([]);
-  // const [movieList, setMovieList] = useState([])
   const [search, setSearch] = useState('');
+  const changeHandler = (e) => {
+    console.log(e.target.value);
+  };
+  const [newMovie, setNewMovie] = useState(movieModel);
+  class Movie {
+    constructor(Title, Year, Rated, Runtime, Genre, Director, Actors, Plot, Poster) {
+      this.Title = Title;
+      this.Year = Year;
+      this.Rated = Rated;
+      this.Runtime = Runtime;
+      this.Genre = Genre;
+      this.Director = Director;
+      this.Actors = Actors;
+      this.Plot = Plot;
+      this.Poster = Poster;
+    }
+  };
   const [movieModel, setMovieModel] = useState({
     'Title': '',
     'Year': '',
@@ -59,9 +76,11 @@ const App = () => {
   useEffect(() => {
     setCurrView(movieList);
   }, []);
+  useEffect(() => {
+  }, [movieList]);
   return <div>
     <Header />
-    <Search />
+    <Search setSearch={setSearch} search={search} getMovie={helpers.getMovie} model={Movie} list={movieList} setList={setMovieList} />
     <List view={movieList} />
   </div>
 }

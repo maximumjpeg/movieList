@@ -19,6 +19,7 @@ div{
 }
 .card-title{
   font-weight: bolder;
+  text-shadow:indianred 2px;
 }
 
 .app-header{
