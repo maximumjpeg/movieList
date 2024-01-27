@@ -10,8 +10,11 @@ const Card = (props) => {
     <div className="card-title">{props.movie.Title}</div>
     <div className="card-year">{props.movie.Year}</div>
     <div className="card-plot">{props.movie.Plot}</div>
-    <div></div>
-
+    <div>{props.movie.Genre}</div>
+    <div>{props.movie.Director}</div>
+    <div>{props.movie.Runtime}</div>
+    <div>{props.movie.Actors}</div>
+    <div>{props.movie.Rating}</div>
   </div>
 }
 

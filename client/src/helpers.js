@@ -7,7 +7,7 @@ module.exports = {
     console.log(config.url, config.key);
   },
   getMovie: (title, model, old, setter) => {
-    axios.get(`${config.url}/?apikey=${config.key}&t=${title}`)
+    axios.get(`${config.url}/?apikey=${config.key}&t=${title}&plot="full"&type="movie"`)
       .then((res) => {
         // console.log(response.data);
         const temp = new model(res.data.Title, res.data.Year, res.data.Rated, res.data.Runtime, res.data.Genre, res.data.Director, res.data.Actors, res.data.Plot, res.data.Poster);
