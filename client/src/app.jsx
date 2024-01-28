@@ -8,8 +8,14 @@ import helpers from './helpers.js';
 // import Sample from '../../sample.js';
 
 const App = () => {
+  const [focused, setFocused] = useState(false);
+  const [currentMovie, setCurrentMovie] = useState({});
   const [currentView, setCurrView] = useState([]);
   const [search, setSearch] = useState('');
+  const [expandSearch, setExpandSearch] = useState(false);
+  const focusHandler = () => {
+
+  };
   const changeHandler = (e) => {
     console.log(e.target.value);
   };
@@ -126,8 +132,8 @@ const App = () => {
   }, [movieList]);
   return <div className="app-wrapper">
     <Header />
-    <Search setSearch={setSearch} search={search} getMovie={helpers.getMovie} model={Movie} list={movieList} setList={setMovieList} />
-    <List view={movieList} />
+    <Search setSearch={setSearch} search={search} getMovie={helpers.getMovie} model={Movie} list={movieList} setList={setMovieList} setExpandSearch={setExpandSearch} expandSearch={expandSearch} />
+    <List view={movieList} focused={focused} setFocused={setFocused} currentMovie={currentMovie} setCurrentMovie={setCurrentMovie} />
   </div>
 }
 
