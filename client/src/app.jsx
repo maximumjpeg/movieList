@@ -124,7 +124,7 @@ const App = () => {
   }, []);
   useEffect(() => {
   }, [movieList]);
-  return <div>
+  return <div className="app-wrapper">
     <Header />
     <Search setSearch={setSearch} search={search} getMovie={helpers.getMovie} model={Movie} list={movieList} setList={setMovieList} />
     <List view={movieList} />
