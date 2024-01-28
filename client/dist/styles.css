@@ -15,6 +15,7 @@ div{
 
 /* Movie Card */
 .card{
+  display: flex;
   border: solid 4px;
   border-radius: 4px;
   margin: 10px;
@@ -22,17 +23,37 @@ div{
   box-shadow: 1.5px 1.5px;
 }
 .card-poster{
-  height: 15vw;
-  border-radius: 2px;
+  /* height: 25vw; */
+  /* margin: auto; */
+  /* border-radius: 2px; */
 }
 .card-title{
   font-weight: bolder;
   text-shadow:indianred 2px;
 }
+.poster-wrapper{
+  /* width: 10%; */
+  margin: 1% 1%;
+}
+.poster-wrapper:hover{
+  border: aqua 4px 4px;
+}
 
 /* Movie List */
 .list-wrapper{
   margin: auto;
+  /* change layout to rows of tiles instead of a scrollable 'feed' syle view */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* end alternate layout */
+  display: flex;
+  flex-direction: column;
+}
+.list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .list-header{
 }
