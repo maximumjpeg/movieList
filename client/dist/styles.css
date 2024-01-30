@@ -5,15 +5,18 @@ body{
 div{
   align-content: center;
 }
+
 /* App wrapper */
 .app-wrapper{
-  /* background-color: rgb(49, 53, 62); */
+  background-color: rgb(49, 53, 62);
   /* background-color: rgb(0, 0, 0); */
   color: white;
 }
+
 /* App header */
 .app-header{
   border: solid black 2px;
+  background-color: rgb(77, 83, 97);
   border-radius: 4px;
   text-align: center;
 }
@@ -27,12 +30,14 @@ div{
   padding: 12px;
   box-shadow: 1.5px 1.5px;
 }
+
 .card-expanded{
   width: 90vw;
-  height:40vh;
+  height:80vh;
   display: flex;
-  background-color: lime;
+  background-color: black;
 }
+
 .card-poster{
   /* height: 25vw; */
   /* margin: auto; */
@@ -40,14 +45,17 @@ div{
   border-radius: 4px;
   transition: transform 250ms ease-out;
 }
+
 .card-title{
   font-weight: bolder;
   text-shadow:indianred 2px;
 }
+
 .poster-wrapper{
   /* width: 10%; */
   margin: 1% 1%;
 }
+
 .card-poster:hover{
   /* border: 4px solid rgba(255, 255, 255, 0); */
   /* box-shadow: 0 0 100px rgba(0, 255, 255, 0.523); */
@@ -55,6 +63,25 @@ div{
   box-shadow: 0 0 40px rgb(255, 255, 255);
   transform: scale(1.1);
   transform-origin: center;
+}
+
+.poster-expanded{
+  transition: transform 250ms ease-out;
+
+}
+
+.close-expanded{
+float: right;
+}
+
+.card-title-expanded{
+  font-weight: bolder;
+}
+
+.movie-rating{
+  border: solid white thin;
+  width: fit-content;
+  padding: 1px;
 }
 
 /* Movie List */
@@ -72,6 +99,7 @@ div{
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  align-content: space-around;
 }
 .list-header{
 }

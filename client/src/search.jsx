@@ -9,7 +9,8 @@ const Search = (props) => {
   }
   if (!!props.expandSearch) {
     return <div className="search-wrapper">
-      <input type="search" className="searchbar" placeholder="Search for a movie" onChange={(e) => {props.setSearch(e.target.value); console.log(e.target.value)}}></input>
+      {/* wrap the input with html form to call the .reset() method */}
+      <input type="search" className="searchbar" placeholder="Search for a movie" onChange={(e) => {props.setSearch(e.target.value); console.log(e.target.value)}} onKeyDown={(e) => {if (e.key === 'Enter') {props.getMovie(props.search, props.model, props.list, props.setList); props.setSearch('')}}}></input>
       <button className="search-icon-button" onClick={() => {props.setExpandSearch(!props.expandSearch)}}>🔎</button>
     </div>
   }

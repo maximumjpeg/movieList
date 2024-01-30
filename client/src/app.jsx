@@ -10,7 +10,7 @@ import helpers from './helpers.js';
 const App = () => {
   const [focused, setFocused] = useState(false);
   const [currentMovie, setCurrentMovie] = useState({});
-  const [currentView, setCurrView] = useState([]);
+  const [currentView, setCurrentView] = useState([]);
   const [search, setSearch] = useState('');
   const [expandSearch, setExpandSearch] = useState(false);
   const focusHandler = () => {
@@ -126,13 +126,13 @@ const App = () => {
 
   ]);
   useEffect(() => {
-    setCurrView(movieList);
+    setCurrentView(movieList);
   }, []);
   useEffect(() => {
   }, [movieList]);
   return <div className="app-wrapper">
     <Header />
-    <Search setSearch={setSearch} search={search} getMovie={helpers.getMovie} model={Movie} list={movieList} setList={setMovieList} setExpandSearch={setExpandSearch} expandSearch={expandSearch} />
+    <Search setSearch={setSearch} search={search} getMovie={helpers.getMovie} model={Movie} list={movieList} setList={setMovieList} setExpandSearch={setExpandSearch} expandSearch={expandSearch} currentView={currentView} setCurrentView={setCurrentView}/>
     <List view={movieList} focused={focused} setFocused={setFocused} currentMovie={currentMovie} setCurrentMovie={setCurrentMovie} />
   </div>
 }
