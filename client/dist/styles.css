@@ -29,13 +29,7 @@ div{
   margin: 10px;
   padding: 12px;
   box-shadow: 1.5px 1.5px;
-}
-
-.card-expanded{
-  width: 90vw;
-  height:80vh;
-  display: flex;
-  background-color: black;
+  flex-direction: column;
 }
 
 .card-poster{
@@ -45,6 +39,37 @@ div{
   border-radius: 4px;
   transition: transform 250ms ease-out;
 }
+
+.card-expanded{
+  width: 90vw;
+  height:80vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.card-left{
+  /* margin: auto; */
+}
+
+.card-right{
+  /* display: flex; */
+  /* margin: auto; */
+  width: fit-content;
+}
+
+.card-top{
+  display: flex;
+  flex-direction: row;
+}
+.card-bottom{
+}
+
+.card-right-top{
+  display: flex;
+  flex-direction: row;
+}
+
 
 .card-title{
   font-weight: bolder;
@@ -67,7 +92,8 @@ div{
 
 .poster-expanded{
   transition: transform 250ms ease-out;
-
+  display: flex;
+  margin: 10px;
 }
 
 .close-expanded{
@@ -82,6 +108,13 @@ float: right;
   border: solid white thin;
   width: fit-content;
   padding: 1px;
+}
+
+.panel-wrapper{
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  align-content: space-around;
 }
 
 /* Movie List */
