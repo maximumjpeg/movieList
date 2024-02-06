@@ -2,9 +2,9 @@ import React from 'react';
 
 const Panel = (props) => {
   return <div className="panel-wrapper">
-    <div>watched-icon</div>
-    <div>star-icon</div>
-    <div>trashcan-icon</div>
+    <div className="">watched-icon</div>
+    <div className="">star-icon</div>
+    <div className="">trashcan-icon</div>
   </div>
 }
 

@@ -13,6 +13,11 @@ const App = () => {
   const [currentView, setCurrentView] = useState([]);
   const [search, setSearch] = useState('');
   const [expandSearch, setExpandSearch] = useState(false);
+  // the next 2 props are just 1 way to add the advanced search for 'year'
+  // if you use an HTML form, you could render both at once and have optional year
+  const [expandAdv, setExpandAdv] = useState(false);
+  const [year, setYear] = useState('');
+
   const focusHandler = () => {
 
   };
@@ -132,7 +137,7 @@ const App = () => {
   }, [movieList]);
   return <div className="app-wrapper">
     <Header />
-    <Search setSearch={setSearch} search={search} getMovie={helpers.getMovie} model={Movie} list={movieList} setList={setMovieList} setExpandSearch={setExpandSearch} expandSearch={expandSearch} currentView={currentView} setCurrentView={setCurrentView}/>
+    <Search year={year} setYear={setYear} expandAdv={expandAdv} setExpandAdv={setExpandAdv} setSearch={setSearch} search={search} getMovie={helpers.getMovie} model={Movie} list={movieList} setList={setMovieList} setExpandSearch={setExpandSearch} expandSearch={expandSearch} currentView={currentView} setCurrentView={setCurrentView}/>
     <List view={movieList} focused={focused} setFocused={setFocused} currentMovie={currentMovie} setCurrentMovie={setCurrentMovie} />
   </div>
 }
