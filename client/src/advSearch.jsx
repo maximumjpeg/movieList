@@ -6,9 +6,9 @@ const AdvSearch = (props) => {
     return <div className="adv-collapsed">
     <input type="checkbox" onClick={() => {props.setExpandAdv(!props.expandAdv)}}></input>
     <label>Advanced Search</label>
-    <Year year={props.year} setYear={props.setYear} />
+    <Year year={props.year} setYear={props.setYear} expandAdv={props.expandAdv} />
   </div>
-  } else if (props) {
+  } else if (props && props.expandAdv === false) {
     return <div className="adv-collapsed">
       <input type="checkbox" onClick={() => {props.setExpandAdv(!props.expandAdv)}}></input>
       <label>Advanced Search</label>

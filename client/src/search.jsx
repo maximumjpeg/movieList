@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AdvSearch from './advSearch.jsx';
-import Year from './year.jsx';
+
 
 const Search = (props) => {
   if (props.expandSearch === false) {
@@ -14,7 +14,7 @@ const Search = (props) => {
       {/* wrap the input with html form to call the .reset() method */}
       <input type="search" className="searchbar" placeholder="Search for a movie" onChange={(e) => {props.setSearch(e.target.value); console.log(e.target.value)}} onKeyDown={(e) => {if (e.key === 'Enter') {props.getMovie(props.search, props.model, props.list, props.setList); props.setSearch('')}}}></input>
       <button className="search-icon-button" onClick={() => {props.setExpandSearch(!props.expandSearch)}}>🔎</button>
-      <AdvSearch setExpandAdv={props.setExpandAdv} />
+      <AdvSearch setExpandAdv={props.setExpandAdv} expandAdv={props.expandAdv} />
     </div>
   }
 
